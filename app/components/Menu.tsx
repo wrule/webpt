@@ -27,7 +27,7 @@ function Menu(props: { items?: MenuItem[] }) {
   return <ul>
     {items.map((item) => <li id={item.path}>
       <Link
-        className={`flex items-center h-8 border-b px-4 duration-200 ${
+        className={`flex items-center h-8 px-4 duration-200 ${
           isActive(item.path) ? 'bg-main-200' : 'hover:bg-main-100 hover:text-main-500'
         }`}
         to={item.path}>

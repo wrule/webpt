@@ -19,6 +19,7 @@ export default {
           '900': '#723f11',
           '950': '#432005',
         },
+        // https://uicolors.app/create
       },
     },
   },

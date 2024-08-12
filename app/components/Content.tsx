@@ -1,7 +1,8 @@
+import { PropsWithChildren } from "react";
 
 export default
-function Content() {
+function Content(props: PropsWithChildren) {
   return <div className="pt-16">
-    1234
+    {props.children}
   </div>;
 }

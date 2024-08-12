@@ -9,10 +9,11 @@ function App() {
   return <>
     <Header />
     <Sider>
-      <Menu items={Array(100).fill(0).map((_, index) => ({
+      {/* <Menu items={Array(100).fill(0).map((_, index) => ({
         name: `路由你好路由你好路由你好路由你好路由你好路由你好${index + 1}`,
         path: `/${index + 1}`,
-      }))} />
+      }))} /> */}
+      <Menu />
     </Sider>
     <Content>
       <Outlet />

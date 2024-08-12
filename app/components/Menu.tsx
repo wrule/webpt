@@ -21,7 +21,7 @@ function Menu(props: { items?: MenuItem[] }) {
   return <ul>
     {items.map((item) => <li id={item.path}>
       <Link
-        className="flex items-center h-8 border-b px-4 hover:bg-main-50 hover:text-main-600 duration-100"
+        className="flex items-center h-8 border-b px-4 hover:bg-main-100 hover:text-main-500 duration-100"
         to={item.path}>
         {item.name}
       </Link>

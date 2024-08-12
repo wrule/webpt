@@ -5,7 +5,7 @@ import Menu from "~/components/Menu";
 import Sider from "~/components/Sider";
 
 export default
-function App() {
+function Doc() {
   return <>
     <Header />
     <Sider>

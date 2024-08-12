@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react";
+import { Link, useLocation } from "@remix-run/react";
 import { useMemo } from "react";
 
 export
@@ -9,6 +9,12 @@ interface MenuItem {
 
 export default
 function Menu(props: { items?: MenuItem[] }) {
+  const rLocation = useLocation();
+
+  const isActive = (path: string) => {
+    if (path === '/') return rLocation.pathname === path;
+    return rLocation.pathname.startsWith(path);
+  };
 
   const items = useMemo(() => {
     const result: MenuItem[] = [];
@@ -21,7 +27,9 @@ function Menu(props: { items?: MenuItem[] }) {
   return <ul>
     {items.map((item) => <li id={item.path}>
       <Link
-        className="flex items-center h-8 border-b px-4 hover:bg-main-100 hover:text-main-500 duration-100"
+        className={`flex items-center h-8 border-b px-4 duration-200 ${
+          isActive(item.path) ? 'bg-main-200' : 'hover:bg-main-100 hover:text-main-500'
+        }`}
         to={item.path}>
         {item.name}
       </Link>

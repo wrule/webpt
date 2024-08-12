@@ -1,5 +1,5 @@
 
 export default
-function ViewAbout() {
+function DocAbout() {
   return <div>关于</div>;
 }

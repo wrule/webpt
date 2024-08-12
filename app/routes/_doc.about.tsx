@@ -1,3 +1,8 @@
+import { MetaFunction } from "@remix-run/react";
+
+export const meta: MetaFunction = () => {
+  return [{ title: "DEMO About" }];
+};
 
 export default
 function DocAbout() {

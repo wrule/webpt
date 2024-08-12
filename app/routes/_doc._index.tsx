@@ -7,7 +7,8 @@ export const meta: MetaFunction = () => {
   ];
 };
 
-export default function DocIndex() {
+export default
+function DocIndex() {
   return (
     <div>
       你好，世界

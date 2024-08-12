@@ -8,7 +8,8 @@ function App() {
   return <>
     <Header />
     <Sider />
-    <Content />
-    {/* <Outlet /> */}
+    <Content>
+      <Outlet />
+    </Content>
   </>;
 }
